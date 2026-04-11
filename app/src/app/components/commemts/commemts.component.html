@@ -1,0 +1,64 @@
+<div class="comments-container">
+    <!-- {{ comments.length }} -->
+    <div *ngFor="let c of comments">
+        <!-- <pre>{{ c.comments | json}}</pre> -->
+
+        <div class="comments-section">
+            <div>
+                <img src="dummy.jpg" alt="Your Avatar" style="
+            width: 25px;
+            height: 25px;
+            object-fit: cover;
+            border-radius: 50%;
+          " />
+                <span>{{ c?.user?.username }}:</span>
+                <p>{{ c?.content }}</p>
+            </div>
+            <div>
+                <button (click)="like(c._id, 'Comment')">
+                    {{ c.likes.length }}Like
+                </button>
+                <button (click)="toggleComment(c._id)">Comment</button>
+            </div>
+        </div>
+
+        <!-- <div *ngIf="expandedCommentId === c._id " class="nested-replies">
+            <app-commemts [parentId]="c._id" [parentModel]="'Comment'" [comments]="c.comments"></app-commemts>
+            <form class="comments-form">
+                <input #commentInput type="text" class="my-input" placeholder="Add a comment..." />
+                <button type="button" class="post-btn" (click)="Comment(commentInput.value)">
+                    <span>Post</span>
+                </button>
+            </form>
+        </div> -->
+        <div *ngIf="activeReplyId === c._id" class="nested-replies" style="padding-left: 1.5rem;">
+            <!-- <div>
+                <form class="comments-form">
+                    <input #commentInput type="text" class="my-input" placeholder="Write a reply..." />
+                    <button type="button" class="post-btn" (click)="Comment(commentInput.value); commentInput.value=''">
+                        <span>Post</span>
+                    </button>
+                </form>
+            </div> -->
+            <form class="comments-form">
+                <input #replyInput type="text" class="my-input" placeholder="Write a reply..." />
+                <button type="button" class="post-btn" (click)="addReply(replyInput.value, c); replyInput.value=''">
+                    <span>Post</span>
+                </button>
+            </form>
+        </div>
+        <div style="padding-left: 2rem;">
+            <app-commemts [parentId]="c._id" [parentModel]="'Comment'" [comments]="c.comments">
+            </app-commemts>
+        </div>
+
+
+    </div>
+    <!-- [parentId]="c._id" [parentModel]="'Comment'" [comments]="c.comments" -->
+    <form *ngIf="!parentId" class="comments-form">
+        <input #commentInput type="text" class="my-input" placeholder="Add a comment..." />
+        <button type="button" class="post-btn" (click)="Comment(commentInput.value)">
+            <span>Post</span>
+        </button>
+    </form>
+</div>

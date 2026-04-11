@@ -1,0 +1,20 @@
+<div class="form-container">
+    <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+        <div class="form-header">Welcome to SocialApp</div>
+        <div class="title">Sign in to your account or create a new one</div>
+        <div><input placeholder="Enter your Email" class="email-input" name="email" [(ngModel)]="user.email"
+                #email="ngModel" required email /></div>
+        <div><input placeholder="Enter your Password" class="password-input" name="password" [(ngModel)]="user.password"
+                #password="ngModel" required /></div>
+        <div class="forgot-password-section">
+            <div class="check-area"><input type="checkbox" class="checkbox" /><span>Remember me</span></div>
+            <a href="#">Forgot Password?</a>
+        </div>
+        <button>Sign In</button>
+        <div class="redirect-login">
+            <span class="line-text">
+                <span class="label">New to SocialApp? <a routerLink="/signup">Create an account</a></span>
+            </span>
+        </div>
+    </form>
+</div>

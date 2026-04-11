@@ -1,0 +1,15 @@
+
+.create-tweet-btn{
+    width:100%;
+    max-width:160px;
+    display:flex;
+    margin:50px auto auto 50px
+}
+/* Small screens — remove margin-left to prevent hiding */
+ @media (max-width: 300px) {
+   .create-tweet-btn {
+     margin-left: 0;
+    margin-right: auto;
+     margin-left: auto;  /* center for mobile */
+   }
+ }

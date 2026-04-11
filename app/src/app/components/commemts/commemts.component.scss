@@ -1,0 +1,83 @@
+.comments-container{
+    background-color:rgb(243, 244, 246);
+    padding:1rem;
+    margin-top:1rem;
+    // Target nested containers (containers inside other containers)
+    .comments-container {
+        margin-top: 0.5rem;   // Reduce gap for nested replies
+        padding: 0 0 0 1rem;  // Only keep left padding for the "indent" look
+        background-color: transparent; // Prevent the gray getting darker
+    }
+ 
+}
+// Remove vertical padding from the last element to prevent bottom heavy-ness
+.comments-container > div:last-child {
+    padding-bottom: 0;
+}
+
+
+.comments-form{
+display:flex;flex-direction:row;
+}
+.post-btn {
+  background-color: #6b7280; 
+  color: white;              
+  padding: 0.5rem 1rem;      
+  border-radius: 0.5rem; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.post-btn:hover {
+  background-color: #4b5563; /* hover:bg-gray-600 */
+}
+
+.my-input {
+  width: 100%;
+  padding: 0.5rem 1rem; 
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem; 
+  outline: none;
+  margin-right:8px
+}
+
+.my-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); 
+  border-color: #d1d5db; 
+}
+
+@media (max-width:345px){
+  .my-input{
+    padding:0 5px;
+  }
+}
+
+
+
+// Comments Section area
+.comments-section {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding-top:0.5rem;
+    padding-bottom:0.5rem   ;
+    color: #6b7280;
+
+}
+.comments-section div {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Adjust this value to your liking */
+}
+.comments-section button {
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+

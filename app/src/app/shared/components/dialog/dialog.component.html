@@ -1,0 +1,6 @@
+<div class="card">
+    <p><strong>Write your Blog Content Here</strong></p>
+    <textarea rows="5" pSize="large" class="textarea-section" pTextarea [autoResize]="true" [(ngModel)]="content"
+        name="blogcontent"></textarea>
+    <p-button class="tweet-btn" severity="info" label="Publish Blog" (click)="createBlog()" />
+</div>

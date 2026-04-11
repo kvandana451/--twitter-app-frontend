@@ -1,0 +1,13 @@
+.blog-cards,
+.comments-section {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+@media (max-width: 967px) {
+  .blog-cards,
+  .comments-section {
+    width: 90%;
+  }
+}

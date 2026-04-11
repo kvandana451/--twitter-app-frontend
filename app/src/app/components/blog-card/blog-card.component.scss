@@ -1,0 +1,44 @@
+
+// :host ::ng-deep .p-card{
+//     width:100%;
+//     // max-width:500px;
+// }
+:host ::ng-deep .my-card .p-card-header {
+
+ padding: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border-radius: 8px 8px 0 0;
+   background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+:host ::ng-deep .my-card .p-card-body{
+    padding:0 !important
+}
+:host ::ng-deep .my-card .p-card-content{
+    padding:15px !important
+}
+:host ::ng-deep .my-card .p-card-footer{
+    display:flex;
+    margin-top:1px;
+    justify-content:space-between;
+    align-items:center;
+    background-color:rgb(243 244 246);
+    padding:8px;
+}
+
+// action buttons
+button{
+    border:none;
+    cursor:pointer;background-color:transparent
+}
+// comment-image
+.comment-btn{
+width:35px;height:35px;
+}
+
+.my-card-container{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:15px;
+}

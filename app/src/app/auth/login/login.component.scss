@@ -1,0 +1,119 @@
+a {
+  text-decoration: none;
+  color: #125ca1;
+}
+
+a:hover {
+  color: #6366f1;
+}
+.form-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+form {
+  width: 100%;
+  max-width: 400px;
+  // margin: 30px auto;
+  // border:1px solid black;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color:#4b5563;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.email-input {
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  width:100%
+}
+
+.password-input {
+  border-radius: 0 0 6px 6px;  
+  width:100%
+
+}
+
+.forgot-password-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  margin-right:4px;
+  cursor: pointer;
+}
+
+.check-area {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #125ca1;
+}
+
+.redirect-login {
+  margin-top: 16px;
+}
+
+.label {
+  background-color: lightgray;
+
+}
+
+.line-text {
+  display: flex;
+  align-items: center;
+  color: #777;
+}
+
+.line-text::before,
+.line-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+// Media Queries
+@media (max-width: 450px) {
+    .title {
+font-size:15px
+}
+  form {
+    max-width: 310px;
+  }
+}

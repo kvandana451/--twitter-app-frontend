@@ -37,4 +37,10 @@ export class LoginComponent {
       },
     });
   }
+
+  ngOnInit() {
+    if (this.authService.getToken()) {
+      this.router.navigate(['/home']);
+    }
+  }
 }

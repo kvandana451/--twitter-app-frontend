@@ -3,15 +3,19 @@ import { NgForm } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { loginData, signupData } from '../models/auth-interface';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+  ) {}
   private TOKEN_KEY = 'jwtToken';
-  private apiUrl = 'http://localhost:3000/api'; //for development purpose
-  // private apiUrl = `https://twitterapi-6tp6.onrender.com/api`; //the same url used for development is been deployed
+  // private apiUrl = 'http://localhost:3000/api'; //for development purpose
+  private apiUrl = `https://twitterapi-6tp6.onrender.com/api`; //the same url used for development is been deployed
 
   // OPTIONAL
   // Angular already sets Content-Type: application/json automatically
@@ -39,6 +43,13 @@ export class AuthService {
 
   removeToken(): void {
     sessionStorage.removeItem(this.TOKEN_KEY); // Use sessionStorage instead of localStorage
+  }
+
+  logout() {
+    // remove token / user data
+    this.removeToken();
+    // navigate to login page
+    this.router.navigate(['/login']);
   }
 }
 

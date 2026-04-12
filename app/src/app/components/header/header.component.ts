@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
 import { Menubar, MenubarModule } from 'primeng/menubar';
 import { Menu } from 'primeng/menu';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -25,6 +26,8 @@ import { Menu } from 'primeng/menu';
 export class HeaderComponent {
   items: MenuItem[] | undefined;
   avatarMenu: MenuItem[] = [];
+
+  constructor(private logout: AuthService) {}
 
   ngOnInit() {
     this.items = [
@@ -55,6 +58,9 @@ export class HeaderComponent {
       {
         label: 'Logout',
         icon: 'pi pi-sign-out',
+        command: () => {
+          this.logout.logout();
+        },
       },
     ];
   }

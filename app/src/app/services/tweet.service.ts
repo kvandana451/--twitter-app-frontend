@@ -16,7 +16,7 @@ import { Observable, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class TweetService {
-  apiUrl = `https://twitterapi-6tp6.onrender.com/api/tweets`;
+  apiUrl = `https://twitterapi-6tp6.onrender.com/api`;
   // 'http://localhost:3000/api';
   //  `https://twitterapi-6tp6.onrender.com/api/tweets`,
 

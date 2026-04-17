@@ -3,7 +3,13 @@
     width:100%;
     max-width:160px;
     display:flex;
-    margin:50px auto auto 50px
+    margin:50px auto auto 50px;
+}
+:host ::ng-deep .my-custom-button{
+      background-color: var(--create-tweet-btn) !important;
+      color:#ffffff !important;
+      border:none;
+
 }
 /* Small screens — remove margin-left to prevent hiding */
  @media (max-width: 300px) {

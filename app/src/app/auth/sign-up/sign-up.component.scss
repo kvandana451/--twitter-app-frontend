@@ -38,8 +38,17 @@ input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  background-color:var(--auth-input);
+  color:black;
+}
+input:focus {
+    outline: none;
+    box-shadow: none;
 }
 
+label{
+  color:black;
+}
 button {
   width: 100%;
   padding: 10px;

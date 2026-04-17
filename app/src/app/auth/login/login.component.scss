@@ -27,6 +27,7 @@ form {
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
+  color:black;
 }
 
 .title {
@@ -35,9 +36,19 @@ form {
   color:#4b5563;
 }
 
-input {
+ input {
   padding: 8px;
   border: 1px solid #ccc;
+  background-color:var(--auth-input);
+  color:black
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+input[type="checkbox"]{
+  appearance: none
 }
 
 .email-input {
@@ -57,12 +68,20 @@ input {
   justify-content: space-between;
   margin: 18px 0;
 }
+.forgot-password-section span{
+  color:grey
+}
+input[type="checkbox"] {
+  background-color: var(--auth-input);
+}
+
 
 .checkbox {
   width: 15px;
   height: 15px;
   margin-right:4px;
   cursor: pointer;
+
 }
 
 .check-area {

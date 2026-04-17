@@ -5,7 +5,9 @@
   display: none;
 }
 
-
+:host ::ng-deep .p-menubar{
+  border:1px solid var( --header-border-color) !important;
+}
 
 
 @media  (min-width:768px){

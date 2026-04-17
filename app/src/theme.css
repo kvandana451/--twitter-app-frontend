@@ -1,0 +1,35 @@
+:root {
+  --primary-color: #0099ff;
+  --bg-main: #ffffff;
+  --text-main: #333333;
+  --card: #ffffff;
+  --card-header: linear-gradient(135deg, #00c6ff, #0072ff);
+  --card-footer: rgb(243 244 246);
+  --action-button-color:rgba(0, 0, 0, 0.663);
+  --action-button-hover:rgb(28, 27, 27)  ;
+
+  --border-color: #f0f0f0;
+  --header-border-color:#f0f0f0;
+  --comments-container:rgb(243, 244, 246);
+  --create-tweet-btn:#22c55e;
+  --auth-input:#ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #007acc;
+    --bg-main: #121212;
+    --text-main: #e0e0e0;
+    --card: #1e1e26;
+    --card-header: #3b82f6;
+    --card-footer: #2a2a35;
+    --action-button-color: #b0b0c0;
+    --action-button-hover:#ffffff;
+    --border-color: #333333;
+    --header-border-color:#000000;
+    --comments-container:#1e1e26;
+    --create-tweet-btn:#16a34a;
+  --auth-input:#ffffff;
+
+
+  }
+}

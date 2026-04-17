@@ -1,7 +1,8 @@
 .comments-container{
-    background-color:rgb(243, 244, 246);
+    background-color:var( --comments-container);
     padding:1rem;
     margin-top:1rem;
+    border-radius: 8px;
     // Target nested containers (containers inside other containers)
     .comments-container {
         margin-top: 0.5rem;   // Reduce gap for nested replies
@@ -36,7 +37,7 @@ display:flex;flex-direction:row;
 .my-input {
   width: 100%;
   padding: 0.5rem 1rem; 
-  border: 1px solid #d1d5db;
+  border: 1px solid var( --border-color);
   border-radius: 0.5rem; 
   outline: none;
   margin-right:8px
@@ -76,6 +77,9 @@ display:flex;flex-direction:row;
     background: none;
     border: none;
     cursor: pointer;
+}
+.comments-section button:hover{
+  filter: brightness(70%);
 }
 
 

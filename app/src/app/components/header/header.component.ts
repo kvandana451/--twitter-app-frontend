@@ -8,6 +8,7 @@ import { Ripple } from 'primeng/ripple';
 import { Menubar, MenubarModule } from 'primeng/menubar';
 import { Menu } from 'primeng/menu';
 import { AuthService } from '../../services/auth.service';
+import { DrawerComponent } from '../drawer/drawer.component';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +20,7 @@ import { AuthService } from '../../services/auth.service';
     InputTextModule,
     Ripple,
     CommonModule,
+    DrawerComponent,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

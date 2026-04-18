@@ -14,8 +14,8 @@ export class AuthService {
     private router: Router,
   ) {}
   private TOKEN_KEY = 'jwtToken';
-  // private apiUrl = 'http://localhost:3000/api'; //for development purpose
-  private apiUrl = `https://twitterapi-6tp6.onrender.com/api`; //the same url used for development is been deployed
+  private apiUrl = 'http://localhost:3000/api'; //for development purpose
+  // private apiUrl = `https://twitterapi-6tp6.onrender.com/api`; //the same url used for development is been deployed
 
   // OPTIONAL
   // Angular already sets Content-Type: application/json automatically

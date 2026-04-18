@@ -1,0 +1,46 @@
+<div class="card flex justify-center">
+    <p-drawer #drawerRef [(visible)]="visible" [modal]="false" styleClass="my-narrow-drawer">
+        <ng-template #headless>
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between px-6 pt-4 shrink-0">
+                    <span class="inline-flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="twitter-logo">
+                            <path
+                                d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z" />
+                        </svg>
+                    </span>
+                    <span>
+                        <p-button type="button" (click)="closeCallback($event)" icon="pi pi-times" rounded="true"
+                            outlined="true" styleClass="h-8 w-8"></p-button>
+                    </span>
+                </div>
+                <div class="overflow-y-auto">
+                    <nav class="flex flex-col gap-2">
+                        <a *ngFor="let item of navItems" [routerLink]="item.route"
+                            routerLinkActive="bg-primary text-primary-contrast"
+                            [routerLinkActiveOptions]="{exact: true}" (click)="drawerVisible = false"
+                            class="flex  items-center gap-3 p-3 w-full rounded-lg hover:bg-surface-100 transition-colors cursor-pointer text-surface-700">
+                            <i [class]="item.icon"></i>
+                            <span class="font-medium">{{ item.label }}</span>
+                        </a>
+                    </nav>
+
+                </div>
+                <div class="bg-blue-600 p-8 text-white font-bold text-center border-4 border-black">
+                    Tailwind is Working!
+                </div>
+
+                <div class="mt-auto">
+                    <hr class="mb-4 mx-4 border-t border-0 border-surface" />
+                    <a pRipple
+                        class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors p-ripple">
+                        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+                            shape="circle" />
+                        <span class="font-bold">Amy Elsner</span>
+                    </a>
+                </div>
+            </div>
+        </ng-template>
+    </p-drawer>
+    <p-button (click)="visible = true" icon="pi pi-bars" />
+</div>

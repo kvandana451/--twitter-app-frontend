@@ -34,9 +34,7 @@
             "styles": [
              "node_modules/primeicons/primeicons.css",  
              "src/theme.css",
-             "src/tailwind.css",
              "src/styles.scss" 
-             
             
             ],
             "scripts": []

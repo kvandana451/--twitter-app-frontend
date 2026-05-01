@@ -1,5 +1,0 @@
-/* src/tailwind.css */
-@layer theme, tailwind-base, primeng, tailwind-utilities;
-
-@import "tailwindcss";
-@import "tailwindcss-primeui";

@@ -1,5 +1,4 @@
-
-
+/* You can add global styles to this file, and also import other style files */
 
 * {
   margin: 0;
@@ -67,13 +66,3 @@
   align-items: center;
 }
 
-
-// SIDEBAR
- .p-drawer-left  {
-    width: 250px !important; // Set your desired width
-    
-    // Optional: If you want to ensure it doesn't take up full screen on mobile
-    @media screen and (max-width: 768px) {
-        width: 100%;
-    }
-}
